@@ -9,6 +9,6 @@ Notice that you must configure the package to provide the API key for your AMT a
     $ php artisan config:publish crowdtruth/mturk
 ```
 
-Afterwards you should edit file *vendor/crowdtruth/mturk/src/config/config.php* as required. In particular, you need to provide your accesskey and secretkey.
+Afterwards you should edit file *app/config/packages/crowdtruth/mturk/config.php* as required. In particular, you need to provide your accesskey and secretkey.
 
 For more information visit: http://crowdtruth.org/
