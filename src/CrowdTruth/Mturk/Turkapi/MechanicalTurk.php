@@ -581,8 +581,8 @@ class MechanicalTurk {
 		// Add the common parameters
 		$data['Operation']		= $operation;	
 		$data['AWSAccessKeyId']	= $this->accesskey;
-		$data['Signature'] 		= $this->generateSignature("AWSMechanicalTurkRequester", $operation, time(), false);
-		$data['Timestamp']		= time();
+		$data['Timestamp']		= (new \DateTime())->format(\DateTime::ISO8601);
+		$data['Signature'] 		= $this->generateSignature("AWSMechanicalTurkRequester", $operation, $data['Timestamp'], false);
 		
 		if(isset($responsegroup)) $data['ResponseGroup'] = $responsegroup; 
 		 
